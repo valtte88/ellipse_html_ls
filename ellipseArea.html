@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<h1>Ellipsin pinta-ala:</h1>
+
+<script type="text/javascript" language="Javascript">
+
+    function doSum() 
+    {
+     var a = parseFloat(document.getElementById("a").value);
+     var b = parseFloat(document.getElementById("b").value);
+   
+     var area = Math.PI * a * b;
+   
+     document.getElementById("area").value = area;
+   }
+</script>
+
+<form action="" method="POST">
+<br/>Anna ellipsin puoliakseli a:<br/>
+<input type="text" id="a" onblur='doSum()' value="100" size="5" />
+<br/>Anna ellipsin puoliakseli b:<br/>
+<input type="text" id="b" onblur='doSum()' value="50" size="5" />
+<br/>Ellispin pinta-ala on:<br/>
+<input type="text" id="area" value='' size="20"/>
+</form>
+
+<input id="button1" type="button" value="Muuta mitat kuvaan"
+            onclick="changeDimensions()"/>
+<br/><br/>
+
+<svg height="300" width="400">
+  
+    <ellipse id="ell1" cx="200" cy="150" rx="100" ry="50"
+    style="fill:lightblue;stroke:darkblue;stroke-width:2" />
+    <line id="line1" x1="200" y1="150" x2="100" y2="150" style="stroke:darkblue;stroke-width:2" />
+    <line id="line2" x1="200" y1="150" x2="200" y2="100" style="stroke:darkblue;stroke-width:2" />
+    <text x="175" y="145" fill="derkblue">a</text>
+    <text x="187" y="130" fill="darkblue">b</text>
+  </svg>
+
+<script>
+    function changeDimensions() {
+        document.getElementById("ell1").setAttribute("rx", a.value);
+        document.getElementById("ell1").setAttribute("ry", b.value);
+        document.getElementById("line1").setAttribute("x2", ("200" - a.value));
+        document.getElementById("line2").setAttribute("y2", ("150" - b.value));
+
+    }
+</script>
+</body>
+</html>
