@@ -8,7 +8,7 @@ body {
 	line-height: 1.75em;
 	font-size: 16px;
 	background-color: #222;
-	color: yellow;
+	color: #aaa;
 }
 
 .simple-container {
@@ -54,13 +54,13 @@ h3 {
 	line-height: 27px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border-bottom: 1px solid #D8D8D8;
-	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #c9b32e;
+	border-top: 1px solid #c9b32e;
 }
 
 hr {
 	height: 1px;
-	background-color: #d8d8d8;
+	background-color: #c9b32e;
 	border: none;
 	width: 100%;
 	margin: 0px;
